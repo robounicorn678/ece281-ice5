@@ -1,0 +1,483 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Apr  6 15:39:40 2025
+# Process ID         : 4808
+# Current directory  : C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent19656 C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\elevatorController.xpr
+# Log file           : C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/vivado.log
+# Journal file       : C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5\vivado.jou
+# Running On         : C27-5CG31326RQ
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : AMD Ryzen 7 PRO 6850U with Radeon Graphics     
+# CPU Frequency      : 2695 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16442 MB
+# Swap memory        : 14495 MB
+# Total Virtual      : 30938 MB
+# Available Virtual  : 18473 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1087.543 ; gain = 36.328
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "elevator_controller_fsm_tb_behav -key {Behavioral:sim_1:Functional:elevator_controller_fsm_tb} -tclbatch {elevator_controller_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source elevator_controller_fsm_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'elevator_controller_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1124.668 ; gain = 20.102
+close_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'elevator_controller_fsm'
+ERROR: [VRFC 10-2989] 'f_1' is not declared [C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd:126]
+ERROR: [VRFC 10-9458] unit 'behavioral' is ignored due to previous errors [C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd:83]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'elevator_controller_fsm'
+ERROR: [VRFC 10-2989] 'f_1' is not declared [C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd:126]
+ERROR: [VRFC 10-9458] unit 'behavioral' is ignored due to previous errors [C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd:83]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-39] 'get_xpm_libraries' failed due to earlier errors.
+
+    while executing
+"rdi::get_xpm_libraries"
+    (procedure "xcs_get_xpm_libraries" line 14)
+    invoked from within
+"xcs_get_xpm_libraries"
+    (procedure "usf_xsim_setup_simulation" line 50)
+    invoked from within
+"usf_xsim_setup_simulation"
+    (procedure "tclapp::xilinx::xsim::setup" line 29)
+    invoked from within
+"tclapp::xilinx::xsim::setup { -simset sim_1 -mode behavioral -run_dir C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorC..."
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'elevator_controller_fsm'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.elevator_controller_fsm [elevator_controller_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.elevator_controller_fsm_tb
+Built simulation snapshot elevator_controller_fsm_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.891 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "elevator_controller_fsm_tb_behav -key {Behavioral:sim_1:Functional:elevator_controller_fsm_tb} -tclbatch {elevator_controller_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source elevator_controller_fsm_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'elevator_controller_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1160.156 ; gain = 7.266
+close_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'elevator_controller_fsm'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.elevator_controller_fsm [elevator_controller_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.elevator_controller_fsm_tb
+Built simulation snapshot elevator_controller_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "elevator_controller_fsm_tb_behav -key {Behavioral:sim_1:Functional:elevator_controller_fsm_tb} -tclbatch {elevator_controller_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source elevator_controller_fsm_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'elevator_controller_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1160.156 ; gain = 0.000
+close_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'elevator_controller_fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'elevator_controller_fsm_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.elevator_controller_fsm [elevator_controller_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.elevator_controller_fsm_tb
+Built simulation snapshot elevator_controller_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "elevator_controller_fsm_tb_behav -key {Behavioral:sim_1:Functional:elevator_controller_fsm_tb} -tclbatch {elevator_controller_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source elevator_controller_fsm_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'elevator_controller_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1177.008 ; gain = 0.000
+close_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/src/elevator_controller_fsm_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'elevator_controller_fsm_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.elevator_controller_fsm [elevator_controller_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.elevator_controller_fsm_tb
+Built simulation snapshot elevator_controller_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "elevator_controller_fsm_tb_behav -key {Behavioral:sim_1:Functional:elevator_controller_fsm_tb} -tclbatch {elevator_controller_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source elevator_controller_fsm_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'elevator_controller_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1818.676 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/elevator_controller_fsm_tb/uut_inst}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'elevator_controller_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'elevator_controller_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj elevator_controller_fsm_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot elevator_controller_fsm_tb_behav xil_defaultlib.elevator_controller_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevatorController.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "elevator_controller_fsm_tb_behav -key {Behavioral:sim_1:Functional:elevator_controller_fsm_tb} -tclbatch {elevator_controller_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source elevator_controller_fsm_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'elevator_controller_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 2274.668 ; gain = 0.000
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/elevator_controller_fsm_tb/uut_inst}} 
+save_wave_config {C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevator_controller_fsm_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevator_controller_fsm_tb_behav.wcfg
+set_property xsim.view C:/Users/C27Charles.Liermann/Documents/ECE281/ICE_ICE_BABY/ece281-ice5/elevator_controller_fsm_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\C27Charles.Liermann\Documents\ECE281\ICE_ICE_BABY\ece281-ice5\src\elevator_controller_fsm_tb.vhd:]
+INFO: [Simtcl 6-16] Simulation closed
+exit
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  6 18:50:35 2025...

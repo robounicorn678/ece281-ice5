@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../src/elevator_controller_fsm.vhd" \
+"../../../../src/elevator_controller_fsm_tb.vhd" \
+
+# Do not sort compile order
+nosort
